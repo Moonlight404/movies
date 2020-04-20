@@ -1,0 +1,328 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background: #1c1a1a;
+    color: #fff;
+    overflow: hidden !important;
+}
+
+body, html{
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Chrome/Safari/Opera */
+       -khtml-user-select: none; /* Konqueror */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none;
+    -webkit-font-smoothing: antialiased !important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    overflow: hidden !important;
+ }
+
+ ::-webkit-scrollbar {
+    width: 14px;
+    z-index: 10000;
+}
+::-webkit-scrollbar:hover{
+   -webkit-transition: 0.7s ease-in;
+    -moz-transition: 0.7s ease-in;
+    -o-transition: 0.7s ease-in;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 10000;	
+}
+::-webkit-scrollbar-thumb {
+   height: 6px;
+   border: 4px solid rgba(0, 0, 0, 0);
+   background-clip: padding-box;
+   -webkit-border-radius: 7px;
+   background-color: rgba(178, 178, 178, 0.7);
+   z-index: 10000;
+}
+::-webkit-scrollbar-button{
+   width: 0;
+   height: 0;
+   display: none;
+   z-index: 10000;
+}
+::-webkit-scrollbar-corner {
+   background-color: transparent;
+}
+
+
+#app{
+    display: flex;
+    width: calc(100% - 4vw);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background: #151515;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    overflow: hidden !important;
+}
+
+.center{
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    width: 90%;
+    height: 80%;
+    transform: translate(10%, -20%);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    background-size: cover;
+}
+
+.background::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,.70);
+    z-index: -1;
+}
+
+.center h1{
+    color: #fff;
+    font-size: 3vw;
+}
+
+.center h2{
+    font-size: 2vw;
+    line-height: 4vw;
+    margin-top: 4%;
+}
+
+.home_notlogged .right{
+    float: right;
+    position: absolute;
+    right: 10vw;
+    top: 10vw;
+}
+
+button{
+    transition: 0.4s ease;
+}
+
+.home_notlogged .right button{
+    background: #ebebeb;
+    border: none;
+    -webkit-border-radius: .25rem;
+    border-radius: .25rem;
+    height: auto;
+    margin-bottom: .5rem;
+    width:  25vw;
+    font-size: 1.7vw;
+    cursor: pointer;
+    outline: none;
+    color: #151515;
+    padding: 2vw;
+    display: block;
+    border: 0.4vw solid transparent;
+}
+
+.home_notlogged .right button:focus{
+    background-color: rgba(0,0,0,.30);
+    border: 0.4vw solid #ebebeb;
+    color: #fff;
+}
+
+.buttonAtivoKeyboard{
+    background-color: transparent;
+    border: 0.4vw solid #ebebeb;
+    color: #fff;
+}
+
+.home_notlogged .right button .icon{
+    float: left;
+    position: absolute;
+    left: 3vw;
+}
+
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #00000038;
+    padding: 1vw;
+    border-radius: 0.1em;
+    font-size: 1.5vw;
+}
+
+form{
+    background: #fff;
+    padding: 3vw;
+    width: 30vw;
+    border-radius: 0.3em;
+}
+
+.auth{
+    color: #151515;
+    top: 0% !important;
+}
+
+.input{
+    margin-bottom: 1vw;
+    left: -1vw;
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+form h1{
+    color: #151515 !important;
+    font-size: 2.3vw !important;
+    font-weight: normal !important;
+    padding: 0px !important;
+    margin: 0px !important; 
+    top: -1vw !important;
+    position: relative !important;
+}
+
+.none{
+    left: 120%;
+    transition: 0.4s ease;
+}
+
+.centralizar{
+    left: 55%;
+}
+
+.back{
+    color: #151515;
+    padding: 1vw;
+    font-size: 2vw;
+    position: absolute;
+    top: -0.5vw;
+    left: -3.689vw;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.4s ease;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.40);
+}
+
+.back:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 1px 2px rgba(0,0,0,.40);
+}
+
+.error{
+    border: 0.2vw solid red;
+}
+
+form{
+    transition: 0.4s ease;
+}
+
+form button{
+    width: 100% !important;
+    left: 1vw;
+    position: relative;
+}
+
+form button:focus{
+    background: #151515 !important;
+}
+
+label{
+    font-size: 1.5vw;
+}
+
+
+
+@media screen and (max-width: 500px){
+    .none .back{
+        display: none;
+  }
+    h1{
+        font-size: 14vw !important;
+    }
+    h2{
+        font-size: 9vw !important;
+        line-height: 10vw !important;
+    }
+    .home_notlogged  .center{
+        left: -2%;
+        top: 20%;
+    }
+    .home_notlogged .right button{
+        font-size: 7vw;
+        position: relative;
+        width: 77vw !important;
+        left: 1vw !important;
+    }
+    .home_notlogged .right{
+        display: block;
+        position: relative;
+    }
+
+    form{
+            left: 0vw;
+            position: fixed;
+            width: 90%;
+            top: 0%;
+    }
+
+    form h1{
+        font-size: 10vw !important;
+    }
+
+    form label{
+        font-size: 6vw;
+    }
+
+    form input{
+        font-size: 9vw;
+    }
+
+    form button{
+        left: 4vw !important;
+        width: 5vw !important;
+    }
+
+    form input{
+        margin-bottom: 3vw;
+        font-size: 8vw !important;
+    }
+
+    .error{
+        border: 2px solid red;
+    }
+
+    .back{
+        font-size: 9vw;
+        top: 31%;
+        position: fixed;
+        left: 80%;
+        z-index: 100;
+        background: #151515;
+        color: #ffff;
+        border-radius: 20vw;
+        padding: 2vw;
+    }
+
+    .none form{
+        left: 120% !important;
+    }
+
+    .centralizar form {
+        left: 0% !important;
+        top: 29%;
+    }
+
+    .centralizar{
+    left: -8%;
+}
+    
+    .centralizar .back{
+        display: block;
+    }
+
+}

@@ -1,0 +1,13 @@
+<?php
+define( 'MYSQL_HOST', 'localhost' );
+define( 'MYSQL_USER', 'kaway404' );
+define( 'MYSQL_PASSWORD', 'X@nde321321' );
+define( 'MYSQL_DB_NAME', 'hardelxy_xande' );
+try
+{
+    $PDO = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
+}
+catch ( PDOException $e )
+{
+    echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
+}

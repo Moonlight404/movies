@@ -1,0 +1,270 @@
+body{
+    background: #1c1a1a !important;
+}
+
+.left{
+    background: #282828;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: 10vw;
+    position: fixed;
+    -webkit-box-shadow: 0 0 0.75rem 0 rgba(0,0,0,0.24), 0 0 0.75rem 0 rgba(0,0,0,0.48);
+    box-shadow: 0 0 0.75rem 0 rgba(0,0,0,0.24), 0 0 0.75rem 0 rgba(0,0,0,0.48);
+}
+
+.left li{
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    font-size: 2vw;
+    padding: 2vw 0vw 2vw;
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    top: 10vw;
+    color: #7f7c7c;
+}
+
+.left li:hover{
+    background: #373737;
+}
+
+.left .ativo{
+    background: #fff;
+    color: #373737;
+}
+
+.left .ativo:hover{
+    background: #fff;
+    color: #373737;
+}
+
+.center_b{
+    position: fixed;
+    width: 100%;
+    left: 10vw;
+    background: #2f2f2f;
+    height: 100%;
+}
+
+.center_b h1{
+    font-size: 2vw;
+    left: 0vw;
+    position: relative;
+    padding: 1vw;
+}
+
+.center_b .left_c{
+    width: 20vw;
+    height: 80%;
+    position: fixed;
+    border-right: 0.2vw solid #373737;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    left: 10vw;
+}
+
+.center_b .left_c li{
+    width: 100%;
+    list-style: none;
+    font-size: 1.5vw;
+    margin-bottom: 0vw;
+    padding: 1vw;
+    position: relative;
+    left: 0vw;
+    cursor: pointer;
+}
+
+.center_b .left_c .ativo{
+    background: #fff;
+    color: #373737;
+}
+
+.center_b .left_c .ativo:hover{
+    background: #fff;
+    color: #373737;
+}
+
+.center_b .left_c li:hover{
+    background: #373737;
+}
+
+.left_c{
+    position: fixed;
+    left: 13vw;
+}
+
+.center_c h2{
+    color: #ccc;
+    font-size: 1.5vw;
+}
+
+.center_c button{
+    width: 100%;
+    background: #373737;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.5vw;
+    padding: 0.5vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+.center_c .ativo{
+    background: #fff;
+    color: #373737;
+}
+
+.center_c{
+    position: fixed;
+    left: 55vw;
+    top: 30%;
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.center_c .icon{
+    font-size: 6vw;
+    position: relative;
+    color: #777474;
+}
+
+.center_c button .icon{
+    float: right;
+    font-size: 2vw;
+    position: absolute;
+    margin-top: -2vw;
+    right: 1vw;
+    color: #2196F3;
+}
+
+.center_c .iconAtivoSom{
+    background: #fff;
+    color: #373737;
+}
+
+@media screen and (max-width: 500px){
+    .left{
+        width: 100%;
+        bottom: 0vw;
+        height: auto;
+        overflow: hidden;
+        padding: 0vw;
+        left: 0vw;
+        z-index: 1000;
+    }
+
+    .left li{
+        width: 1vw;
+        font-size: 6vw;
+        padding: 6vw 11vw 7vw 7vw;
+        float: left;
+        top: 2vw;
+        left: 2vw;
+        text-align: center;
+    }
+
+    .center_b{
+    position: fixed;
+    width: 100%;
+    left: 0vw;
+    background: #2f2f2f;
+    height: calc(100% - 20vw);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    }
+
+    .center_b h1{
+        font-size: 9vw !important;
+        left: 0vw;
+        position: relative;
+        padding: 4vw;
+    }
+
+    .center_b .left_c{
+        width: 100%;
+        height: 10vw;
+        position: fixed;
+        border-right: 0.2vw solid #373737;
+        overflow-x: auto;
+        overflow-y: hidden;
+        left: 0vw;
+        white-space: nowrap;
+        background: #00000030;
+        padding: 2vw;
+        top: 29vw;
+        z-index: 1000;
+    }
+
+    .center_b .left_c li{
+        width: auto;
+        list-style: none;
+        font-size: 6vw;
+        margin-bottom: 0vw;
+        padding: 2vw;
+        position: relative;
+        left: 0vw;
+        float: left;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+    .center_b .left_c li:hover{
+        background: #373737;
+    }
+
+    .left_c{
+        position: fixed;
+        left: 13vw;
+        overflow: auto;
+    }
+
+    .center_c h2{
+        color: #ccc;
+        font-size: 1.5vw;
+    }
+
+    .center_c button{
+        width: 100%;
+        background: #373737;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 8vw;
+        padding: 2vw;
+        margin-bottom: 0.5vw;
+        cursor: pointer;
+        border-radius: 0.2rem;
+    }
+
+    .center_c .ativo{
+        background: #fff;
+        color: #373737;
+    }
+
+    .center_c{
+        position: fixed;
+        left: 0vw;
+        top: 32%;
+        text-align: center;
+        height: calc(100% - 81vw);
+    }
+
+
+    .center_c .icon{
+        font-size: 20vw;
+        position: relative;
+        color: #777474;
+    }
+
+    .center_c button .icon{
+    font-size: 7vw;
+    position: relative;
+    margin-top: 1vw;
+    }
+}
