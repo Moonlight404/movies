@@ -235,6 +235,10 @@ label{
     font-size: 1.5vw;
 }
 
+.home_notlogged .right button:hover{
+    box-shadow: -1px 0px 4px 20px rgba(119, 56, 56, 0.18);
+    transform: scale(0.97);
+}
 
 
 @media screen and (max-width: 500px){

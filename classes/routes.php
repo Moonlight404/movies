@@ -2,6 +2,7 @@
 
 require '../vendor/autoload.php';
 use GuzzleHttp\Client;
+require 'movie.php';
 
 class route {
 
@@ -13,36 +14,58 @@ class route {
         }
     }
 
-    public  function estouLogado(){
-        $client = new Client([
-            'headers' => [
-                'Content-Type' => 'application/json',
-            ]
-        ]);
-        $urlCompleta = "https://".$_SERVER['HTTP_HOST']."/api/users/verificaSessao";
-        $response = $client->request('POST', $urlCompleta, [
-    'form_params' => [
-        'token' => $_COOKIE['token'],
-    ]
-]);
-        $logado = $response->getBody();
-        return $logado;
-    }
-
-    public function souAdmin(){
-        $client = new Client([
-            'headers' => [
-                'Content-Type' => 'application/json',
-            ]
-        ]);
-        $urlCompleta = "https://".$_SERVER['HTTP_HOST']."/api/users/isAdmin";
-        $response = $client->request('POST', $urlCompleta, [
+    public function searchMovie($movie){
+        $urlCompleta = "https://api.themoviedb.org/3/movie/". $movie  ."?api_key=ccc818e2030b429ec7c400dd6cc5551e&language=pt-BR";
+        $response = $client->request('GET', $urlCompleta, [
         'form_params' => [
             'token' => $_COOKIE['token'],
         ]
     ]);
-        $admin = $response->getBody();
-        return $admin;
+        $movie = $response->getBody();
+        $objMovie = json_decode($movie);
+        return $objMovie;
+    }
+
+    public  function estouLogado(){
+        if(isset($_COOKIE['token'])){
+            $client = new Client([
+                'headers' => [
+                    'Content-Type' => 'application/json',
+                ]
+            ]);
+            $urlCompleta = "http://".$_SERVER['HTTP_HOST']."/api/users/verificaSessao";
+            $response = $client->request('POST', $urlCompleta, [
+            "timeout" => 3000,
+            'form_params' => [
+                'token' => $_COOKIE['token'],
+            ]
+            ]);
+            $logado = $response->getBody();
+            return $logado;
+        } else{
+            return "false";
+        }
+    }
+
+    public function souAdmin(){
+        if(isset($_COOKIE['token'])){
+            $client = new Client([
+                'headers' => [
+                    'Content-Type' => 'application/json',
+                ]
+            ]);
+            $urlCompleta = "http://".$_SERVER['HTTP_HOST']."/api/users/isAdmin";
+            $response = $client->request('POST', $urlCompleta, [
+            "timeout" => 3000,
+            'form_params' => [
+                'token' => $_COOKIE['token'],
+            ]
+            ]);
+            $admin = $response->getBody();
+            return $admin;  
+        } else{
+            return "false";
+        }
     }
 
     public function getRoute($url){

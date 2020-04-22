@@ -1,8 +1,8 @@
 <?php
-define( 'MYSQL_HOST', 'localhost' );
-define( 'MYSQL_USER', 'kaway404' );
-define( 'MYSQL_PASSWORD', 'X@nde321321' );
-define( 'MYSQL_DB_NAME', 'hardelxy_xande' );
+define( 'MYSQL_HOST', 'mysql873.umbler.com:41890' );
+define( 'MYSQL_USER', 'hardelcorp' );
+define( 'MYSQL_PASSWORD', '-7l27g?(UD' );
+define( 'MYSQL_DB_NAME', 'hardelcorp' );
 try
 {
     $PDO = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
