@@ -207,6 +207,73 @@ body{
     width: 100% !important;
 }
 
+
+.lightMode .center_b{
+    background: #eae9e9 !important;
+    color: #151515;
+}
+
+.lightMode .center_c h2{
+    color: #151515;
+}
+
+.lightMode .center_b .left_c .ativo{
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.lightMode .left li{
+    color: #151515;
+}
+
+.lightMode .left li:hover{
+    background: rgba(0,0,0,.80);
+    color: #fff;
+}
+
+.lightMode .center_c button{
+    color: #151515;
+    background: #fff;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.40);
+}
+
+.lightMode .center_c .iconAtivoSom{
+    background: #000;
+    color: #fff;
+}
+
+.lightMode .center_b .left_c li:hover{
+    background: rgba(0,0,0,.80) !important;
+    color: #fff !important;
+}
+
+.lightMode .center_b .left_c .ativo:hover{
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.lightMode .left_c{
+    border-right: 0.2vw solid #00000038 !important;
+}
+
+.lightMode .left{
+    background: #fff;
+}
+
+.lightMode .left li{
+    color: #151515;
+}
+
+.lightMode .left .ativo{
+    background: #000;
+    color: #eee;
+}
+
+.lightMode .left li:hover{
+    background: rgba(0,0,0,.90);
+    color: #fff;
+}
+
 @media screen and (max-width: 500px){
     .mama li{
     left: 30% !important;

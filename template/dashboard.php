@@ -11,7 +11,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 </head>
 <body>
-   <div id="app" class="home_logged">
+   <div id="app" 
+   class="home_logged"
+   :class="{lightMode : !darkMode}">
     <div class="left">
         <div @click="acess(link)" v-for="link in links">
             <li  :class="{ativo: link.name == linkAtual}">
@@ -53,7 +55,7 @@
             <div class="left_c">
                 <li class="ativo">Configurações</li>
             </div>
-            <div class="center_c" v-if="abaAtivaSettings == 'sons'">
+            <div class="center_c">
                 <div class="icon">
                     <i class="fas fa-cog"></i>
                 </div>
