@@ -78,10 +78,14 @@ class route {
                  require("../template/404.php");
              }
          }else if(preg_match("/themovieDB/", $url)) {
+             if($this->souAdmin() == "true"){
              $id = trim($url, '/themovieDB/');
              if(!$id == ""){
                 echo $this->searchMovie($id);
              }
+            } else{
+                require("../template/404.php");
+            }
          }else{
             $this->template($url);
          }

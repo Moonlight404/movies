@@ -13,6 +13,10 @@ body{
     box-shadow: 0 0 0.75rem 0 rgba(0,0,0,0.24), 0 0 0.75rem 0 rgba(0,0,0,0.48);
 }
 
+.home_logged .center_c{
+    top: 30%;
+}
+
 .left li{
     width: 100%;
     text-align: center;

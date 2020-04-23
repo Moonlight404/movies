@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 </head>
 <body>
-   <div id="app" class="home_logged">
+   <div id="app" class="home_admin">
     <div class="left mama">
         <div @click="acess(link)" v-for="link in links">
             <li  :class="{ativo: link.name == linkAtual}">
