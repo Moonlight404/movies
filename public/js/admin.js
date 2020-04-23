@@ -40,7 +40,8 @@ const js = new Vue({
             "poster_path": "",
             "popularity": 0,
             "backdrop_path": ""
-        }
+        },
+        buscou: false
     },
     created() {
         $.ajax({
@@ -125,6 +126,7 @@ const js = new Vue({
                     $("#nome").html(movieName);
                     $("#desc").html(overview);
                     $("form .poster").attr('src', `https://image.tmdb.org/t/p/w500/${poster_path}`);
+                    $(".viewFilme button").css("display", "block");
                 },
                 error: function (argument) {
 

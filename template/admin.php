@@ -25,6 +25,8 @@
             <h1>Adicionar</h1>
             <div class="left_c">
                 <li class="ativo">Filme</li>
+                <li>Serie</li>
+                <li>Anime</li>
                 </div>
             <div class="center_c" v-if="abaAtivaSettings == 'sons'">
                 <div class="icon">
@@ -40,8 +42,8 @@
                     <img class="poster" src="poster.jpg" alt="">
                     <h1 id="nome">Nome filme</h1>
                     <p id="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada ipsum at cursus sodales. Curabitur nec nibh ac diam lobortis mollis. Ut id libero sodales erat vulputate rhoncus. Proin et odio a odio rutrum elementum non vitae ex. Suspendisse mollis dictum eros eu molestie. Morbi molestie consequat sagittis. Sed vel nulla faucibus, bibendum lacus a, hendrerit lorem. Aliquam porta, leo eu laoreet maximus, urna augue tempus tortor, quis feugiat massa eros nec neque. Quisque iaculis, arcu non cursus aliquam, risus diam aliquam libero, at lobortis massa sem vel metus.
-
-</p>
+                    </p>
+                    <button style="display: none;">Adicionar filme</button>
                 </form>
             </div>
              <div class="center_c" v-if="abaAtivaSettings == 'repro'">

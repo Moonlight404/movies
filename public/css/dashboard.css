@@ -131,7 +131,7 @@ body{
 }
 
 .center_b .viewFilme{
-    height: 20vw;
+    height: 13vw;
     top: 0%;
     background: rgba(0,0,0,.40);
 }
@@ -150,8 +150,8 @@ body{
     position: relative !important;
     top: 3vw !important;
     left: 1vw;
-    max-height: 30vw;
-    overflow: hidden;
+    height: 10vw;
+    overflow: auto;
     width: auto;
     word-break: break-all;
     text-align: center;
@@ -169,7 +169,7 @@ body{
     text-align: center;
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 100%;
+    height: 86%;
     width: 75%;
     transform: translate(-50%, 10px);
 }
@@ -223,13 +223,14 @@ body{
     }
 
     .left li{
-        width: 1vw;
+        width: 2vw;
         font-size: 6vw;
-        padding: 7vw 11vw 7vw 7vw;
+        padding: 5vw 10vw 5vw 8vw;
         float: left;
         top: 2vw;
         left: 2vw;
         text-align: center;
+        left: 0vw;
     }
 
     .center_b{
@@ -369,5 +370,9 @@ body{
     top: 8vw !important;
     left: 3vw;
     background: rgba(0,0,0,.80);
+}
+
+.left .ativo{
+    border-top: 2vw solid #2196f3;
 }
 }
