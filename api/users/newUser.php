@@ -19,7 +19,7 @@ $stmt->execute();
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 if(count($users) <= 0){
 if(strlen($data['email']) > 5 && strlen($data['password']) > 0){
-    $token = $user->getToken(150);
+    $token = $user->getToken(90);
     try {
     $stmt = $PDO->prepare('INSERT INTO user (email,password,token, admin) VALUES(:email,:password,:token, :admin)');
     $stmt->execute(array(

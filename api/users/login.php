@@ -15,7 +15,7 @@ $stmt->bindParam(':password', $encryptadoSenha);
 $stmt->execute();
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 if(count($users) > 0){
-    $token = $user->getToken(150);
+    $token = $user->getToken(90);
     $sql = "UPDATE user SET token=? WHERE email=? and  password=?";
     $stmt= $PDO->prepare($sql);
     $stmt->execute([$token, $email, $encryptadoSenha]);
